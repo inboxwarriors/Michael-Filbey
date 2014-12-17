@@ -1,0 +1,42 @@
+.mainhome
+  background: url("./img/home.jpg") no-repeat
+  background-size: cover
+  +hero
+
+.services
+  +box
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+  li
+    +col-1-4
+    padding: 0
+    padding: 0 .8rem 1rem 0
+  img
+    margin-bottom: 1rem
+  p
+    font-size: 0.8rem
+
+.home-recommendation
+  +box
+
+  .recommendation
+    +col-full
+
+  .profile
+    +col-1-4
+  .job-detail
+    +col-1-4
+
+  blockquote
+    +col-1-2
+    margin: 0
+    p
+      font-style: italic
+      font-size: 120%
+      &::before
+        content: "“"
+        font-family:
+      &::after
+        content: "”"

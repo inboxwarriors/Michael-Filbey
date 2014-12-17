@@ -136,3 +136,20 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// TypeKit Fonts
+/*
+ * Dev Site
+*/
+function theme_typekit() {
+    wp_enqueue_script( 'theme_typekit', '//use.typekit.net/xxu3bbm.js');
+}
+add_action( 'wp_enqueue_scripts', 'theme_typekit' );
+
+function theme_typekit_inline() {
+  if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<?php }
+}
+add_action( 'wp_footer', 'theme_typekit_inline' );
+

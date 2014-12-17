@@ -1,5 +1,49 @@
 body
   background: url("./img/old_wall.png") repeat
 
+
+.content-area
+  +group
+
 =banner
   width: 100%
+
+
+=hero
+  min-height: 300px
+  height: 300px
+  padding: 1rem
+  margin: 2rem 0
+  @include breakpoint(small)
+    padding: 1rem 0
+
+
+
+div[class^='module-']
+  background: rgba(255, 255, 255, 0.85)
+  width: 50%
+  padding: 1.8rem 1.5rem
+  @include breakpoint(small)
+    width: 100%
+    background: rgba(255, 255, 255, 1.0)
+    margin-top: 280px
+    margin-bottom: 2rem
+
+
+div[class$="right"]
+  float: right
+
+div[class$="left"]
+  float: left
+
+.text-area-two
+  +group
+  & > div
+    +col-1-2
+    vertical-align: top
+
+=box
+  +group
+  background: $tertiary
+  +pad
+  margin-bottom: 2rem

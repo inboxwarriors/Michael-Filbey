@@ -21,8 +21,12 @@ body
 
 div[class^='module-']
   background: rgba(255, 255, 255, 0.85)
-  width: 50%
+  width: 70%
   padding: 1.8rem 1.5rem
+  p
+    margin-bottom: 0
+    @include breakpoint(medium)
+      font-size: 0.8rem
   @include breakpoint(small)
     width: 100%
     background: rgba(255, 255, 255, 1.0)
@@ -36,14 +40,24 @@ div[class$="right"]
 div[class$="left"]
   float: left
 
+.text-area
+  +group
+  & > div
+    +col-full
+    vertical-align: top
+
 .text-area-two
   +group
   & > div
     +col-1-2
     vertical-align: top
 
+.intro
+  margin: 2rem 0
+
 =box
   +group
   background: $tertiary
   +pad
   margin-bottom: 2rem
+

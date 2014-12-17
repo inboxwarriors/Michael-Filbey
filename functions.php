@@ -51,6 +51,7 @@ function michaelfilbey_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'michaelfilbey' ),
+		'secondary-menu' => __( 'Secondary Menu' )
 	) );
 
 	/*
@@ -105,6 +106,8 @@ function michaelfilbey_scripts() {
 	wp_enqueue_script( 'michaelfilbey-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'michaelfilbey-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_enqueue_script( 'michaelfilbey-my-js', get_template_directory_uri() . '/js/mj.js', array(jquery), '20141217', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

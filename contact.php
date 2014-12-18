@@ -110,7 +110,7 @@ get_header(); ?>
       </form>
     </div>
 
-    <div>
+    <div class="section">
       <h3>My job wasn't in your services list can you still help?</h3>
 
       <p>Not all home maintenance jobs fit nicely into a category, the chances are if it's in your home and it needs doing then Michael can probably do it. Get in touch and ask the question and Michael will get back to you to discuss your issue.

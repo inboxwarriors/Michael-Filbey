@@ -156,3 +156,13 @@ function theme_typekit_inline() {
 }
 add_action( 'wp_footer', 'theme_typekit_inline' );
 
+
+add_action('pre_get_posts','home_testimonials');
+
+function home_testimonials( $query ) {
+  if ( is_main_query() && is_post_type_archive('testimonial') ) {
+    $query->set('posts_per_page', 1);
+  }
+}
+
+

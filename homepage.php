@@ -84,6 +84,111 @@ get_header(); ?>
         </ul>
       </div>
 
+<ul id="Testimonials" class="testimonials">
+
+
+      <?php query_posts( 'post_type=testimonial'); ?>
+
+      <?php
+        $args = array(
+          'post_type' => 'testimonial'
+
+        );
+        $testimonial = new WP_Query( $args );
+        if( $testimonial->have_posts() ) {
+          while( $testimonial->have_posts() ) {
+            $testimonial->the_post();
+            ?>
+      <li class="holder">
+
+      <div class="top">
+        <div class="client-pic">
+            <?php
+
+            $image = get_field('clients_photo');
+
+            if( !empty($image) ): ?>
+
+            <img src="<?php echo $image['url']; ?>
+            " alt="
+            <?php echo $image['alt']; ?>
+            " />
+            <?php endif; ?>
+        </div>
+
+        <div class="client-details">
+          <h4><?php the_field('clients_name'); ?></h4>
+          <h5><?php the_field('clients_postcode'); ?></h5>
+          <p><?php the_field('job_complete_for_client'); ?></p>
+        </div>
+
+        <div class="client-quote">
+          <p><?php the_field('clients_quote'); ?></p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div> <?php
+
+$image = get_field('picture_of_the_job_1');
+
+if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>
+        " alt="
+        <?php echo $image['alt']; ?>
+        " />
+        <?php endif; ?></div>
+        <div><?php
+
+$image = get_field('picture_of_the_job_2');
+
+if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>
+        " alt="
+        <?php echo $image['alt']; ?>
+        " />
+        <?php endif; ?></div>
+        <div><?php
+
+$image = get_field('picture_of_the_job_3');
+
+if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>
+        " alt="
+        <?php echo $image['alt']; ?>
+        " />
+        <?php endif; ?>
+</div>
+        <div><?php
+
+$image = get_field('picture_of_the_job_4');
+
+if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>
+        " alt="
+        <?php echo $image['alt']; ?>
+        " />
+        <?php endif; ?></div>
+      </div>
+
+
+
+
+
+
+
+
+        </li>
+      <!-- .holder -->
+
+      <?php
+          }
+        }
+        else { echo 'Oh no Testimonials yet!'; }
+     ?></ul>
 
 
     </main><!-- #main -->

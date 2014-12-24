@@ -1,0 +1,87 @@
+ul.testimonials
+  margin: 0
+  padding: 0
+  list-style: none
+
+li.holder
+  +box
+
+  .client-pic, .client-details
+    +col-1-4
+    img
+      width: 100%
+      height: auto
+      overflow: hidden
+    h4
+      font-size: 1.6rem
+      margin-bottom: 0.8rem
+    h5
+      font-size: 1.1rem
+    p
+      font-size: 0.9rem
+
+
+
+
+  .client-pic
+    padding: 1rem 0.5rem
+    overflow: hidden
+    max-height: 170px
+    height: 170px
+    overflow: hidden
+    +group
+    @include breakpoint(medium)
+      height: 280px
+      max-height: 280px
+    @include breakpoint(small)
+      max-height: auto
+      height: auto
+    @include breakpoint(small)
+      display: none
+
+  .client-details
+    @include breakpoint(small)
+      width: 50%
+      padding: 1rem 0.5rem 1rem 0
+
+  .client-quote
+    +col-1-2
+    @include breakpoint(small)
+      width: 50%
+      float: right
+      padding: 1rem 0 1rem 0.5rem
+    p
+      font-style: italic
+      font-size: 1.2rem
+      &::before
+        content: "“ "
+        font-weight: bold
+        font-size: 1.2rem
+      &::after
+        content: " ”"
+        font-weight: bold
+        font-size: 1.2rem
+
+
+
+  .top, .bottom
+    +col-full
+    padding: 0
+    height: 170px
+    overflow: hidden
+    +group
+    @include breakpoint(medium)
+      height: 280px
+      max-height: 280px
+    @include breakpoint(small)
+      max-height: auto
+      height: auto
+
+
+  .top
+    overflow: visible
+    +group
+
+  .bottom > div
+    +col-1-4
+    padding: 2rem 0.5rem 1rem

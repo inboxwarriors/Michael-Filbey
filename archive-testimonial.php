@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * Template name: Testimonials
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -12,96 +12,90 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main max" role="main">
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-<div class="entry-content">
-			<?php the_field('clients_name'); ?>
-			<?php the_field('clients_postcode'); ?>
-			<?php the_field('job_complete_for_client'); ?>
-			<?php the_field('clients_quote'); ?>
-			<?php
-
-			$image = get_field('clients_photo');
-
-			if( !empty($image) ): ?>
-
-			  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
-
-			<?php
-
-			$image = get_field('picture_of_the_job_1');
-
-			if( !empty($image) ): ?>
-
-			  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
+		        <ul id="emailItems" class="email-design">
+<?php query_posts( 'post_type=testimonial'); ?>
 
 
-			<?php
+		<?php
+		    $args = array(
+		      'post_type' => 'testimonial'
 
-			$image = get_field('picture_of_the_job_2');
-
-			if( !empty($image) ): ?>
-
-			  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
-
-
-			<?php
-
-			$image = get_field('picture_of_the_job_3');
-
-			if( !empty($image) ): ?>
-
-			  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
+		    );
+		    $testimonial = new WP_Query( $args );
+		    if( $testimonial->have_posts() ) {
+		      while( $testimonial->have_posts() ) {
+		        $testimonial->the_post();
+		        ?>
 
 
-			<?php
+		          <li class="holder">
+<p><?php the_field('clients_name'); ?></p>
+<p><?php the_field('clients_postcode'); ?></p>
+<p><?php the_field('job_complete_for_client'); ?></p>
+<p><?php the_field('clients_quote'); ?></p>
+<?php
 
-			$image = get_field('picture_of_the_job_4');
+$image = get_field('clients_photo');
 
-			if( !empty($image) ): ?>
+if( !empty($image) ): ?>
 
-			  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-			<?php endif; ?>
+<?php endif; ?>
 
-	</div><!-- .entry-content -->
-			<?php endwhile; ?>
+<?php
 
-			<?php michaelfilbey_paging_nav(); ?>
+$image = get_field('picture_of_the_job_1');
 
-		<?php else : ?>
+if( !empty($image) ): ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-		<?php endif; ?>
+<?php endif; ?>
+
+
+<?php
+
+$image = get_field('picture_of_the_job_2');
+
+if( !empty($image) ): ?>
+
+  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+<?php endif; ?>
+
+
+<?php
+
+$image = get_field('picture_of_the_job_3');
+
+if( !empty($image) ): ?>
+
+  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+<?php endif; ?>
+
+
+<?php
+
+$image = get_field('picture_of_the_job_4');
+
+if( !empty($image) ): ?>
+
+  <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+<?php endif; ?>
+
+		          </li> <!-- .holder -->
+
+		        <?php
+		      }
+		    }
+		    else { echo 'Oh no Email designs!'; }
+		 ?>
+		 </ul>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

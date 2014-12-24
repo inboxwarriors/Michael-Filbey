@@ -87,7 +87,7 @@ get_header(); ?>
       <div class="text-area intro">
         <div>
           <h3>Partnership information</h3>
-          <p>Michael is a trusted maintenance man for many local estate agents, letting agents and multi property landlords. He provides them with a first class and speedy service. If you want to learn more about establishing a partnership with Michael get in touch by emailing <a href="mailto:mf_[at]_michaelspropertymaintainence.com" class="mail">mf_[at]_michaelspropertymaintainence.com</a></p>
+          <p>Michael is a trusted maintenance man for many local estate agents, letting agents and multi property landlords. He provides them with a first class and speedy service. If you want to learn more about establishing a partnership with Michael get in touch by emailing <a href="mailto:mailto:michaelfilbey_[at]_hotmail.co.uk" class="mail">mailto:michaelfilbey_[at]_hotmail.co.uk</a></p>
         </div>
       </div>
 

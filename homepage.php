@@ -40,7 +40,7 @@ get_header(); ?>
 
       <div class="services box">
         <h3>Services</h3>
-        <ul class="service-list">
+        <ul class="service-list-home">
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/img/plumbing.jpg" alt="Plumbing">
             <h5>Plumbing</h5>
@@ -77,30 +77,14 @@ get_header(); ?>
             <p>The kitchen is the heart of many homes and whether you are undertaking a complete refit or just want to change the doors to freshen up we can help. Our independent advice on kitchen suppliers could save you thousands depending on your requirements.</p>
           </li>
           <li>
-            <img src="<?php bloginfo('template_directory'); ?>/img/plumbing.jpg" alt="Flat pack furniture">
+            <img src="<?php bloginfo('template_directory'); ?>/img/flat_pack.jpg" alt="Flat pack furniture">
             <h5>Flat pack furniture </h5>
             <p>Getting angry at IKEA because there are too many screws, not enough dowels and those drawers don't line up with the runners could be a thing of the past. Prefer  to have a weekend than spend it with those easy to read instructions then get in touch and let us take the hassle away.</p>
           </li>
         </ul>
       </div>
 
-      <div class="home-recommendation">
-        <h3>Latest Recommendationation</h3>
-        <div class="recommendation">
-          <div class="profile">
-            Sam Cooper
-            Uxbridge123
 
-          </div>
-          <div class="job-detail">
-            New Bathroom installed
-            22 Aug 2014
-          </div>
-          <blockquote>
-            <p>Integer quis tempor sem. Donec erat urna, venenatis vitae sem vel, hendrerit fermentum turpis. Phasellus elementum molestie quam.</p>
-          </blockquote>
-        </div>
-      </div>
 
     </main><!-- #main -->
   </div><!-- #primary -->

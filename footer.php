@@ -16,7 +16,7 @@
         <?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
         <div class="footer-module">
           <h2>07984 202 126</h2>
-          <h5><a href="mailto:mf_[at]_michaelspropertymaintainence.com" class="mail-mike">Email Michael</a></h5>
+          <h5><a href="mailto:michaelfilbey_[at]_hotmail.co.uk" class="mail-mike">Email Michael</a></h5>
 
           <h6>Michael is available for call-outs Mon-Sun 7:00-22:00.</h6>
 

@@ -40,12 +40,12 @@
   }
 
   $(document).ready(function(){
-    equalheight('.service-list li');
+    equalheight('.service-list-home li');
   });
 
 
   $(window).resize(function(){
-    equalheight('.service-list li');
+    equalheight('.service-list-home li');
   });
 
   //mailto

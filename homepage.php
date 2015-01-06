@@ -87,12 +87,10 @@ get_header(); ?>
 <ul id="Testimonials" class="testimonials">
 
 
-      <?php query_posts( 'post_type=testimonial'); ?>
-
       <?php
         $args = array(
-          'post_type' => 'testimonial'
-
+          'post_type' => 'testimonial',
+          'posts_per_page'         => '1'
         );
         $testimonial = new WP_Query( $args );
         if( $testimonial->have_posts() ) {

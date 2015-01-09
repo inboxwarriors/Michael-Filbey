@@ -20,7 +20,9 @@
 
           <h6>Michael is available for call-outs Mon-Sun 7:00-22:00.</h6>
 
-          He deals with estate agents, land lords and private tenants. He has 20 years experience and can provide quotes for any job no matter the size.
+          <p>He deals with estate agents, land lords and private tenants. He has 20 years experience and can provide quotes for any job no matter the size.</p>
+
+          <a href="https://www.facebook.com/michaelspropertymaintenance"><img src="<?php bloginfo('template_url'); ?>/img/mf_facebook.svg" class="fb-icon"></a>
         </div>
       </div><!-- .site-info -->
 

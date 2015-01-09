@@ -108,6 +108,11 @@ get_header(); ?>
         </fieldset>
 
       </form>
+
+      <div class="payment-info">
+        <p>Michael also accepts PayPal payments.</p>
+        <img src="<?php bloginfo('template_url'); ?>/img/paypal.svg" class="paypal">
+      </div>
     </div>
 
     <div class="section">

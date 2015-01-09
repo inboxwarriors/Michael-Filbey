@@ -107,6 +107,10 @@ function michaelfilbey_scripts() {
 
 	wp_enqueue_script( 'michaelfilbey-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'magnific-popup', get_template_directory_uri() . '/js/magnific-popup.min.js', array(jquery), '20150106', true );
+
+	wp_enqueue_style( 'magnific-css', get_template_directory_uri() .'/css/magnific-popup.css', array(), '20150106', 'screen' );
+
 	wp_enqueue_script( 'michaelfilbey-my-js', get_template_directory_uri() . '/js/mj.js', array(jquery), '20141217', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

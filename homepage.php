@@ -124,17 +124,17 @@ get_header(); ?>
           <p><?php the_field('clients_quote'); ?></p>
         </div>
       </div>
-      <div class="bottom">
-        <div> <?php
+      <div class="bottom" id="testimonailImages">
+        <div><?php
 
 $image = get_field('picture_of_the_job_1');
 
 if( !empty($image) ): ?>
 
-        <img src="<?php echo $image['url']; ?>
+        <a href="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>
         " alt="
         <?php echo $image['alt']; ?>
-        " />
+        " class="grow" /></a>
         <?php endif; ?></div>
         <div><?php
 
@@ -142,10 +142,10 @@ $image = get_field('picture_of_the_job_2');
 
 if( !empty($image) ): ?>
 
-        <img src="<?php echo $image['url']; ?>
+        <a href="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>
         " alt="
         <?php echo $image['alt']; ?>
-        " />
+        "  class="grow" /></a>
         <?php endif; ?></div>
         <div><?php
 
@@ -153,10 +153,10 @@ $image = get_field('picture_of_the_job_3');
 
 if( !empty($image) ): ?>
 
-        <img src="<?php echo $image['url']; ?>
+        <a href="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>
         " alt="
         <?php echo $image['alt']; ?>
-        " />
+        "  class="grow" /></a>
         <?php endif; ?>
 </div>
         <div><?php
@@ -165,10 +165,10 @@ $image = get_field('picture_of_the_job_4');
 
 if( !empty($image) ): ?>
 
-        <img src="<?php echo $image['url']; ?>
+        <a href="<?php echo $image['url']; ?>"><img src="<?php echo $image['url']; ?>
         " alt="
         <?php echo $image['alt']; ?>
-        " />
+        "  class="grow" /></a>
         <?php endif; ?></div>
       </div>
 
